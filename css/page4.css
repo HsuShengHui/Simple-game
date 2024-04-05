@@ -1,0 +1,6 @@
+body {background-color:black;background:url(../img/page4_background.png) no-repeat;background-size: cover;} 
+h1 {color:black;position:relative;left:20%;}
+.char{width:300px;}
+#pictureNname {float: left;margin-left: 15%;}
+#tableBclass {width:400px;float: right;margin-right: 15%;}
+

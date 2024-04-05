@@ -1,0 +1,4 @@
+body {background-color:black; background:url(../img/page3_background.png) no-repeat;background-size: cover;} 
+h1 {color:white;background-color:black;}
+.proof {width:150px;}
+#proofs{margin-left:auto;margin-right:auto;background-color:rgba(255,255,255,0.8)}

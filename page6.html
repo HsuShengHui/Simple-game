@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Introduction</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="./js/totalname.js"></script>
+<link rel="stylesheet" href="./css/page6.css">
+</head>
+<body>
+<h1>結局</h1>
+<div id="intro">
+<br>
+<br>
+<p class="introtxt">在一個閃耀著藝術光芒的晚上，著名畫家<span class="death">(死者)</span>舉辦了她的十周年宴會。<br>
+這個宴會聚集了藝術界的重要人物和愛好者，每個人都為了慶祝<span class="death">(死者)</span>的成就而聚在一起。<br>
+然而，這個慶典卻意外地變成了一場謀殺案的現場。</p>
+
+<p class="introtxt">當晚，<span class="death">(死者)</span>的屍體被發現在她的工作室內。<br>
+她的<span class="point">脖子和頭髮上有明顯的抓痕，口中散發出淡淡的杏仁味</span>。<br>
+經由法醫判斷後，發現死因為<span class="point">毒殺</span>。</p>
+
+<p class="introtxt">案發現場中，發現了一些線索：<br>
+工作室的窗戶上有著<span class="point">破碎的玻璃碎片和神秘的腳印</span>，顯示有人進入或離開了現場。<br>
+<span class="point">一些<span class="death">(死者)</span>的畫作也被刀割開</span>，顯示有人故意破壞了她的作品。</p>
+
+<p class="introtxt">警方的調查開始，並將嫌疑犯的目光投向了<span class="death">(死者)</span>的妹妹<span class="sister">(妹妹)</span>。<br>
+<span class="sister">(妹妹)</span>同樣具有藝術天賦，但她一直生活在姐姐蘿拉的光芒之下。<br>
+甚至有目擊者稱在謀殺當晚看到<span class="death">(死者)</span>與<span class="sister">(妹妹)</span>一起行動，並聽到她們的爭吵聲。<br>
+<span class="point">因為<span class="sister">(妹妹)</span>忌妒姐姐的成功，便偷偷寫了一封匿名威脅信給<span class="death">(死者)</span></span>，<br>
+被姐姐發現後，心虛又被虧的<span class="sister">(妹妹)</span>氣沖沖地離開了工作室。</p>
+
+<p class="introtxt">另一方面，<span class="death">(死者)</span>的助手<span class="secretary">(助手)</span>也成為了警方的嫌疑對象。<br>
+<span class="point"><span class="secretary">(助手)</span>作為<span class="death">(死者)</span>的助手，一直陪伴在她身旁，在宴會期間負責為她端著飲料。</span><br>
+然而，警方發現了一個金錢糾紛的線索，顯示<span class="secretary">(助手)</span>與<span class="death">(死者)</span>之間存在著經濟上的衝突。<br>
+這使得<span class="secretary">(助手)</span>成為警方調查的重點對象。<br>
+<span class="point">經由調查後發現<span class="secretary">(助手)</span>果然為殺害<span class="death">(死者)</span>的兇手。</span></p>
+
+<p class="introtxt">而第一個發現<span class="death">(死者)</span>屍體的外送員<span class="person">(外送員)</span>，成為了<span class="sister">(妹妹)</span>的目擊證人，並排除了她的兇手身份。<br>
+他無意中發現了工作室的門未關好，進入內部後發現了可怕的場景，立即報警。</p>
+
+<br><br>
+</body>
+<script>
+var index = 0;
+function showParagraphs() {
+	if (index < $('.introtxt').length) {
+		$('.introtxt')[index].style.display = 'block';
+		index++;
+		setTimeout(showParagraphs, 1000);
+		}
+}
+$(document).ready(function () {
+  showParagraphs();
+});
+
+$('.death').text(deathname); 
+$('.sister').text(sistername); 
+$('.secretary').text(secretaryname); 
+$('.person').text(personname); 
+</script>
+</html>

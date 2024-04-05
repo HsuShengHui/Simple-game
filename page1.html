@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Introduction</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="./js/totalname.js"></script>
+<link rel="stylesheet" href="./css/page1.css">
+</head>
+<body>
+<h1>序</h1>
+<div id="intro">
+<p class="introtxt">你是一位無所事事的偵探，每天都到處玩樂。</p>
+<p class="introtxt"><span class="death">(死者)</span>是一位成功的著名畫家，擁有令人艷羨的事業和財富。</p>
+<p class="introtxt">今天是<span class="death">(死者)</span>的十周年展覽暨生日宴會，</p>
+<p class="introtxt">各個社會名流都在這裡進行交流。</p>
+<p class="introtxt">當然你也不會放過這個場合，就在宴會中吃吃喝喝。</p>
+<p class="introtxt">但在這個月黑風高的夜晚，某個外送員意外發現<span class="death">(死者)</span>的屍體。</p>
+<p class="introtxt">故事就此展開序幕......</p>
+</div>
+</body>
+<script>
+var index = 0;
+function showParagraphs() {
+	if (index < $('.introtxt').length) {
+		$('.introtxt')[index].style.display = 'block';
+		index++;
+		setTimeout(showParagraphs, 1000);
+		}
+}
+$(document).ready(function () {
+  showParagraphs();
+});
+$('.death').text(deathname); 
+</script>
+</html>

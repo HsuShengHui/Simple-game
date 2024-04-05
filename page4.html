@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Investigation case</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="./js/totalname.js"></script>
+<link rel="stylesheet" href="./css/page4.css">
+</head>
+<body>
+<h1>調查案件</h1>
+<select id="suspect">
+<option class="sister">妹妹
+<option class="secretary">助手
+<option class="person">外送員
+</select>
+<button id="btn">送出</button><br>
+<div id="pictureNname"></div>
+<div id="tableBclass">
+<table border = "1">
+	<tr><th>Q.你當天晚上在做什麼？</th></tr>
+	<tr><td id="A1">A.</td></tr>
+	<tr><th>Q.請問你有不在場證明嗎？</th></tr>
+	<tr><td id="A2">A.</td></tr>
+	<tr><th>Q.你覺得兇手會是誰？</th></tr>
+	<tr><td id="A3">A.</td></tr>
+</table>
+</div>
+</body>
+<script>
+function getNameByClass(className) {
+	if (className === "sister") {
+		$('#A1').text('A.哦...我前面一直待在宴會裡阿！但我中間有跟姐姐一起去他的工作室，他一直嘲笑我，所以我們打了一架，然後我就離開了！');
+		$('#A2').text('A.沒有诶...應該沒有人知道我走了，沒有人在乎');
+		$('#A3').text('A.雖然我跟他的關係沒有到很好，但我真的不知道會發生這樣的事！！！');
+		return sistername;
+	} else if (className === "secretary") {
+		$('#A1').text('A.我一直跟在老闆身邊！但當時我去樓下買飲料，誰知道會出了意外QQ');
+		$('#A2').text('A.我是自己一個人行動的');
+		$('#A3').text('A.我覺得是老闆的妹妹，他們在宴會中途離開，而且還大吵一架，感覺很有動機');
+		return secretaryname;
+	} else if (className === "person") {
+		$('#A1').text('A.我在送外送');
+		$('#A2').text('A.？？我都在送外送阿，前面的顧客應該可以證明');
+		$('#A3').text('A.不知道诶，我根本不認識她。我當時快到的時候有先打電話，但她沒有接電話，然後我遠遠地看到兩個人進去房間，中途有一些爭吵聲，很快地其中一人就離開了，那個人離開之後，還聽到玻璃破碎的聲音，然後我就按門鈴，結果發現門沒有關！誰知道會遇到這種事...');
+		return personname;}}
+
+$("#btn").click(function() {
+	var selectedOption = $("#suspect option:selected");
+	var selectedClass = selectedOption.attr("class");
+	var imagePath = "./img/char_" + selectedClass + ".png"; 
+	var imageElement = $("<img>").attr("src", imagePath).addClass("char");
+	var nameElement = $("<h2>").addClass(selectedClass).text(getNameByClass(selectedClass));
+	$("#pictureNname").empty().append(imageElement).append("<br>").append(nameElement);
+});
+$('.death').text(deathname); 
+$('.sister').text(sistername); 
+$('.secretary').text(secretaryname); 
+$('.person').text(personname); 
+</script>
+</html>

@@ -1,0 +1,7 @@
+h1 {color:white;
+	position:relative;top:100px;left:50%;}
+.introtxt {display:none;}
+#intro {position:relative;top:100px;left:20%;
+		background-color:rgba(255,255,255,0.8);
+		width:800px;text-align:center;}
+body {background-color:black; background:url(../img/page1_banquet.png) no-repeat;} 

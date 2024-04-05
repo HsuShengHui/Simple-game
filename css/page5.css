@@ -1,0 +1,4 @@
+body {background-color:black;background:url(../img/page4_background.png) no-repeat;background-size: cover;} 
+h1 {color:black;}
+#quizForm {float: left;margin-left:50px;}
+.char {width:130px;float:right;margin-right:75px;margin-top:20px;}

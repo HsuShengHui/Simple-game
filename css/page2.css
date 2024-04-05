@@ -1,0 +1,8 @@
+h1 {color:white;background-color:Sienna;}
+body {background:url(../img/page2_background.png) no-repeat;} 
+#char_target{background-color:rgba(255,255,255,0.8)}
+.char {width:150px;}
+.selected {border-color:red;}
+.char_info{display:none;}
+.line{font-style: italic;text-align:center;}
+.Name_H{font-size: 40px;}

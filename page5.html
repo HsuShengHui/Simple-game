@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Crime scene</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="./js/totalname.js"></script>
+<link rel="stylesheet" href="./css/page5.css">
+</head>
+<body>
+<h1>偵探筆記</h1>
+<form id="quizForm">
+	<h2>誰寄了匿名信？</h2>
+	<label for="q1option1"><input type="radio" name="q1" value="option1"><span class="sister">(妹妹)</span></label><br>
+	<label for="q1option2"><input type="radio" name="q1" value="option2"><span class="secretary">(助手)</span></label><br>
+	<label for="q1option3"><input type="radio" name="q1" value="option3"><span class="person">(外送員)</span></label><br>
+	
+	<h2>死者是怎麼死的？</h2>
+	<label for="q2option1"><input type="radio" name="q2" value="option1">毒殺</label><br>
+	<label for="q2option2"><input type="radio" name="q2" value="option2">毆打致死</label><br>
+	
+	<h2>誰是兇手？</h2>
+	<label for="q3option1"><input type="radio" name="q3" value="option1"><span class="sister">(妹妹)</span></label><br>
+	<label for="q3option2"><input type="radio" name="q3" value="option2"><span class="secretary">(助手)</span></label><br>
+	<label for="q3option3"><input type="radio" name="q3" value="option3"><span class="person">(外送員)</span><br><br>
+    
+    <button type="button" onclick="checkAnswers()">檢查答案</button>
+</form>
+<br><div id="ans"></div>
+</body>
+<script>
+$('.death').text(deathname); 
+$('.sister').text(sistername); 
+$('.secretary').text(secretaryname); 
+$('.person').text(personname); 
+
+function checkAnswers() {
+	var form = document.getElementById("quizForm");
+	var selectedAnswer1 = form.elements["q1"].value;
+	var selectedAnswer2 = form.elements["q2"].value;
+	var selectedAnswer3 = form.elements["q3"].value;
+    if (selectedAnswer1 === "option1" && selectedAnswer2 === "option1" && selectedAnswer3 === "option2") {
+		$('#ans').text("全部答案都正確！");
+	} else {
+		$('#ans').text("有錯誤的答案！");
+	}
+}
+</script>
+
+</html>

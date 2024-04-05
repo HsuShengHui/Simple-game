@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Characters</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="./js/totalname.js"></script>
+<link rel="stylesheet" href="./css/page2.css">
+</head>
+<body>
+<h1>角色介紹</h1>
+<table id="characters" border = "1">
+<tr>
+<td><img src="./img/char_death.png" class="char" id="char_death"></td>
+<td rowspan="4" id="char_target" width="600px" height="600px"></td>
+</tr>
+<tr>
+<td><img src="./img/char_sister.png" class="char" id="char_sister"></td>
+</tr>
+<tr>
+<td><img src="./img/char_secretary.png" class="char" id="char_secretary"></td>
+</tr>
+<tr>
+<td><img src="./img/char_person.png" class="char" id="char_person"></td>
+</tr></table>
+<div id="death_info" class="char_info">
+<span class="death Name_H">(死者)</span>
+<ul>
+<li>30歲，知名畫家，女</li>
+<li>喜歡爬山、看電影</li>
+<li>個性隨興灑脫</li>
+<li>曾收到一封威脅她的匿名信件</li>
+</ul>
+<p class="line">"親愛的<span class="death">(死者)</span>，<br>
+你的成功與財富只是一場偽裝。你不值得擁有這一切。<br>
+你的所作所為將被揭露，你將面臨毀滅的命運。<br>
+死亡將很快降臨。<br>
+匿名者"</p>
+</div>
+<div id="sister_info" class="char_info">
+<span class="sister Name_H">(妹妹)</span>
+<ul>
+<li>主角的妹妹，同樣具有藝術天分，卻一直活在姐姐的陰影下。</li>
+<li>有目擊者指出當晚曾看到她與<span class="death">(死者)</span>來過案發現場<br>
+並聽到他們爭吵，之後就看到<span class="sister">(妹妹)</span>氣沖沖地走出房間</li>
+<p class="line">「她可是我姊姊！我怎麼可能殺他！」</p>
+</ul>
+</div>
+<div id="secretary_info" class="char_info">
+<span class="secretary Name_H">(助手)</span>
+<ul>
+<li>主角的助手，從畢業後一直待在<span class="death">(死者)</span>身邊，協助她的藝術創作。</li>
+<li>因為是助手，在宴會期間一直陪同在<span class="death">(死者)</span>身旁，並幫她端飲料。</li>
+<p class="line">「老闆雖然很嚴苛，但也給我很多機會，我真的很感謝他！」</p>
+</ul>
+</div>
+<div id="person_info" class="char_info">
+<span class="person Name_H">(外送員)</span>
+<ul>
+<li>一名外送員，案發現場的第一發現者。</li>
+<li><span class="death">(死者)</span>生前訂了披薩與飲料，希望能夠跟三五好友續團。</li>
+<li>房間位於二十六樓又加上電梯壞掉，外送員只好一層一層爬上來。</li>
+<p class="line">「痾...我只是一個外送員」</p>
+</ul>
+</div>
+</body>
+
+<script>
+$('#char_death').click(function(){
+	$('#char_target div').css('display', 'none');
+	$('#char_target').append($('#death_info').css('display', 'block'));
+});
+$('#char_sister').click(function(){
+	$('#char_target div').css('display', 'none');
+	$('#char_target').append($('#sister_info').css('display', 'block'));
+});
+$('#char_secretary').click(function(){
+	$('#char_target div').css('display', 'none');
+	$('#char_target').append($('#secretary_info').css('display', 'block'));
+});
+$('#char_person').click(function(){
+	$('#char_target div').css('display', 'none');
+	$('#char_target').append($('#person_info').css('display', 'block'));
+});
+$('.death').text(deathname); 
+$('.sister').text(sistername); 
+$('.secretary').text(secretaryname); 
+$('.person').text(personname); 
+</script>
+</html>
